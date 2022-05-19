@@ -16,7 +16,7 @@ This guide will demonstrate how to configure a linux distribution.
 
 ## Basic Commands
 
-> :bulb: **Tip:** You can see the documentation about commands by using `man`.
+> :bulb: **Tip:** You can look up the documentation about commands by using `man`.
 
 Updating all installed packages.
 
