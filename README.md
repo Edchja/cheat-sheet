@@ -1,6 +1,6 @@
 # Cheat-Sheet
 
-Cheat Sheet is a collection about various topics that consits of
+Cheat Sheet is a collection about various topics that consists of
 
 - Documentations
 - Configuration Guides
@@ -8,4 +8,6 @@ Cheat Sheet is a collection about various topics that consits of
 
 ---
 
-## Table of contents
+## Table of Contents
+
+- [All about Linux](linux/linux.md)
