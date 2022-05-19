@@ -1,6 +1,6 @@
 # Linux
 
-This is a collection about various linux topics.
+This is a collection about various Linux topics.
 
 ## Table of Contents
 
