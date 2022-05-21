@@ -47,4 +47,14 @@ $ sudo apt dist-upgrade -y
 
 ## ZSH and Oh-My-Zsh
 
-TBD
+If _Zsh_ isn't already preinstalled, download it via the apt manager.
+
+```bash
+$ sudo apt install zsh -y
+```
+
+After that, you can install Oh-My-Zsh from [Github](https://github.com/ohmyzsh/ohmyzsh).
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
