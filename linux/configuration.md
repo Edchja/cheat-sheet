@@ -6,6 +6,7 @@ This guide will demonstrate how to configure a linux distribution.
 
 - [Getting started](#getting-started)
 - [Basic commands](#basic-commands)
+- [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
 - [Oh-My-Zsh](#oh-my-zsh)
 
@@ -19,23 +20,51 @@ This guide will demonstrate how to configure a linux distribution.
 
 > :bulb: **Tip:** You can look up the documentation about commands by using `man`.
 
-Updating all installed packages.
+Updating all installed packages
 
 ```bash
 $ sudo apt update
 ```
 
-Upgrade packages.
+Upgrade packages
 
 ```bash
 $ sudo apt full-upgrade -y
 ```
 
-Upgrade your system.
+Upgrade your system
 
 ```bash
 $ sudo apt dist-upgrade -y
 ```
+
+### Update Script
+
+Here is a handy shell script, that will fully update, upgrade and remove unused dependencies from your system.
+
+```bash
+function apt-upd {
+        apt update;
+        apt full-upgrade -y;
+        apt dist-upgrade -y;
+        apt autoremove -y;
+        apt-get clean -y;
+        apt-get autoclean -y
+
+        printf '%.0s\n' {1..3}
+        echo -e "\e[92mSystem is updated.\e[0m"
+        }
+```
+
+To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh.
+
+```bash
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
+```
+
+For the changes to be loaded, you need to enter `source ~/.zshrc` in your terminal. Now, you can type `apt-upd` as root, and everything will be updated.
 
 ## Useful Software and Tools
 
