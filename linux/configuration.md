@@ -20,25 +20,25 @@ This guide will demonstrate how to configure a linux distribution.
 
 > :bulb: **Tip:** You can look up the documentation about commands by using `man`.
 
-Updating all installed packages
+Updating all installed packages:
 
 ```bash
 $ sudo apt update
 ```
 
-Upgrade packages
+Upgrade packages:
 
 ```bash
 $ sudo apt full-upgrade -y
 ```
 
-Upgrade your system
+Upgrade your system:
 
 ```bash
 $ sudo apt dist-upgrade -y
 ```
 
-Change keyboard layout for example german
+Change keyboard layout for example german:
 
 ```bash
 $ sudo setxkbmap -layout de
@@ -46,7 +46,7 @@ $ sudo setxkbmap -layout de
 
 ### Update Script
 
-Here is a handy shell script, that will fully update, upgrade and remove unused dependencies from your system.
+Here is a handy shell script, that will fully update, upgrade and remove unused dependencies from your system:
 
 ```bash
 function apt-upd {
@@ -62,7 +62,7 @@ function apt-upd {
         }
 ```
 
-To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh.
+To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh:
 
 ```bash
 if [ -f ~/.zsh_aliases ]; then
@@ -92,7 +92,7 @@ For the changes to be loaded, you need to enter `source ~/.zshrc` in your termin
 
 ### Install Zsh
 
-If _Zsh_ isn't already pre-installed, install by using the apt manager.
+If _Zsh_ isn't already pre-installed, install by using the apt manager:
 
 ```bash
 $ sudo apt install zsh -y
@@ -100,7 +100,7 @@ $ sudo apt install zsh -y
 
 ### Install Oh-My-Zsh
 
-After that, you can install Oh-My-Zsh from [Github](https://github.com/ohmyzsh/ohmyzsh).
+After that, you can install Oh-My-Zsh from [Github](https://github.com/ohmyzsh/ohmyzsh):
 
 ```bash
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -108,9 +108,9 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 
 ### Configure Oh-My-Zsh
 
-First, change the default theme to [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+First, change the default theme to [Powerlevel10k](https://github.com/romkatv/powerlevel10k):
 
-Clone the repository into the directory `.oh-my-zsh/custom/themes`.
+Clone the repository into the directory `.oh-my-zsh/custom/themes`:
 
 ```bash
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
