@@ -4,4 +4,6 @@ This is a collection about various Docker topics.
 
 ## Table of Contents
 
-TBA
+- [Getting started](/docker/configuration.md#getting-started)
+- [Uninstall old versions](/docker/configuration.md#uninstall-old-versions)
+- [Uninstall Docker](/docker/configuration.md#uninstall-docker-engine)
