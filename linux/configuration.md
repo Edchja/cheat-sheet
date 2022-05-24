@@ -38,6 +38,12 @@ Upgrade your system
 $ sudo apt dist-upgrade -y
 ```
 
+Change keyboard layout for example german
+
+```bash
+$ sudo setxkbmap -layout de
+```
+
 ### Update Script
 
 Here is a handy shell script, that will fully update, upgrade and remove unused dependencies from your system.
