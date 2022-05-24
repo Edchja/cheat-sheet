@@ -33,7 +33,7 @@ If you want to uninstall Docker Engine, CLI, Containerd and Docker Compose compl
 $ sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-After that containers, volumes, networks or customized configuration files on your host ar not automatically removed. To delete all images, containers and volumes:
+After that containers, volumes or customized configuration files on your host are not automatically removed. To delete all images, containers and volumes:
 
 ```bash
 $ sudo rm -rf /var/lib/docker
