@@ -6,7 +6,7 @@ This is a collection about various Linux topics.
 
 ### Linux
 
-- [Configurate Linux](/linux/configuration.md#linux-configuration)
+- [Configure Linux](/linux/configuration.md#linux-configuration)
 - [Getting started with Linux](/linux/configuration.md#getting-started)
 - [Basic Linux commands](/linux/configuration.md#basic-commands)
 - [Useful Software](/linux/configuration.md#useful-software-and-tools)
@@ -14,4 +14,8 @@ This is a collection about various Linux topics.
 
 ### Docker
 
-- [Configurate Docker](/docker/configuration.md#docker-configuration)
+- [Configure Docker](/docker/configuration.md#docker-configuration)
+- [Uninstall old versions](/docker/configuration.md#uninstall-old-versions)
+- [Install Docker](/docker/configuration.md#install-docker-engine)
+- [Post-installation steps for Linux](/docker/configuration.md#post-installation-steps-for-linux)
+- [Uninstall Docker](/docker/configuration.md#uninstall-docker-engine)

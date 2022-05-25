@@ -7,6 +7,7 @@ This guide will demonstrate how to install and configure docker on a linux distr
 - [Getting started](#getting-started)
 - [Uninstall old versions](#uninstall-old-versions)
 - [Install Docker](#install-docker-engine)
+- [Post-installation steps for Linux](#post-installation-steps-for-linux)
 - [Uninstall Docker Engine](#uninstall-docker-engine)
 
 ## Getting Started
@@ -34,7 +35,7 @@ The contents of `/var/lib/docker`, including images, containers, volumes and net
 Before installing Docker Engine, it is necessary to set up the Docker repository first. Afterward, it is possible to install and update Docker from the repository.
 Make sure old versions of Docker are uninstalled before installation (Refer to [uninstall old versions](#uninstall-old-versions)).
 
-### **Set up the repository**
+### Set up the repository
 
 Update your system and install packages to allow `apt` to use a repository over HTTPS:
 
@@ -64,7 +65,7 @@ $ echo \
     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-### **Install Docker Engine**
+### Install Docker Engine
 
 Update the `apt` index and install the _latest version_ of Docker Engine, containerd and Docker Compose:
 
@@ -80,6 +81,62 @@ $ sudo docker run hello-world
 ```
 
 This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
+
+## Post-installation steps for Linux
+
+- [Manage Docker as **non-root**](#manage-docker-as-non-root)
+- [Configure Docker to start on boot](#configure-docker-to-start-on-boot)
+
+This section is about the steps that can be performed after installing Docker Engine so that it works better with Linux.
+
+> :warning: **Warning:** The `docker` group grants privileges equivalent to the `root` user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/#docker-daemon-attack-surface)
+
+### Manage Docker as non-root
+
+To create the `docker` group and add your user to it, run the following commands:
+
+Create the `docker` group:
+
+```bash
+$ sudo groupadd docker
+```
+
+Add your user to the `docker` group:
+
+```bash
+$ sudo usermod -aG docker $USER
+```
+
+Now log out and log back in so that your group membership is re-evaluated.
+If you are on Linux, you can also run the following command to activate the changes to groups:
+
+```bash
+$ newgrp docker
+```
+
+Verify that you can run `docker` commands without `sudo`:
+
+```bash
+$ docker run hello-world
+```
+
+This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
+
+### Configure Docker to start on boot
+
+To automatically start **Docker** and **Containerd** on boot:
+
+```bash
+$ sudo systemctl enable docker.service
+$ sudo systemctl enable containerd.service
+```
+
+To disable this behavior, use `disable` instead:
+
+```bash
+$ sudo systemctl disable docker.service
+$ sudo systemctl disable containerd.service
+```
 
 ## Uninstall Docker Engine
 
