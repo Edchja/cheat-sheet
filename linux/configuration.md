@@ -9,10 +9,11 @@ This guide will demonstrate how to configure a linux distribution.
 - [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
 - [Oh-My-Zsh](#oh-my-zsh)
+- [Install Tor Browser](#install-tor-browser)
 
 ## Getting Started
 
-1. Install a linux distribution. _I would recommend [Kali](https://www.kali.org/get-kali) linux._
+1. Install a linux distribution. _I recommend [Kali](https://www.kali.org/get-kali) linux._
 2. Upgrade the system. _[See basic commands](#basic-commands)_
 3. Install software. _[Useful software](#useful-software-and-tools)_
 
@@ -78,7 +79,7 @@ For the changes to be loaded, you need to enter `source ~/.zshrc` in your termin
 - Docker (Refer to the [Docker](/docker/README.md) section or the official [Docker documentation](https://docs.docker.com/) page)
 - Git
 - [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
-- Tor Browser
+- [Tor Browser](#install-tor-browser)
 - VPN Client
 
 ## Oh-My-Zsh
@@ -153,3 +154,14 @@ Download and unzip a patched font with glyphs (icons) from [Nerd Font](https://n
 Move the **.ttf** files to `~/.local/share/fonts`, maybe you need to create a _fonts_ directory first via `mkdir -p ~/.local/share/fonts`.
 
 Set up the installed font in your terminal as default.
+
+## Install Tor Browser
+
+Tor Browser can be installed very easily by using `apt`.
+
+Open a terminal then run the following commands:
+
+```console
+foo@bar:~$ whoami
+foo
+```
