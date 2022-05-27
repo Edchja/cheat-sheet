@@ -179,4 +179,4 @@ Next time it will be used to update and launch Tor Browser.
 
 > :warning: **Warning:** It is true that you are more **anonymous** when using the Tor Browser instead of a normal browser like Chrome or Firefox.
 >
-> But to be more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure `VPN`. A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
+> But to be more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure _VPN_. A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
