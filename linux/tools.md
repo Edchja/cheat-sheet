@@ -34,3 +34,40 @@ Next time it will be used to update and launch Tor Browser.
 > But to be more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure _VPN_. A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
 
 ## Screen
+
+- [Install Screen]()
+- [Start Screen]()
+- [Start Named Screen]()
+- [Useful Screen Commands]()
+
+**Screen** is a terminal multiplexer. In other words, it means that you can can start a screen session and then open any number of windows (virtual terminals) inside that session. Processes running in Screen will continue to run when their window is not visible even if you get disconnected.
+
+### Install Screen
+
+You can install `Screen` by using the `apt` manager
+
+```bash
+$ sudo apt update
+$ sudo apt install screen
+```
+
+### Start Screen
+
+To start a **Screen** session, simply type `screen` in your terminal.
+Now that you have a screen session open, you can get a list of commands by typing:
+
+```
+Ctrl + a (Shift) ?
+```
+
+### Start Named Session
+
+You can as well start a named session for example if you are running multiple screen sessions. To create a named session:
+
+```bash
+$ screen -S session_name
+```
+
+### Useful Screen Commands
+
+> :bulb: **Tip:** You can use `man` to see a detailed documentation about `screen`.
