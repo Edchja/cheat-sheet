@@ -159,7 +159,7 @@ If you have multiple screen sessions running on your machine, you will need to a
 
 To find the session ID list the current running `screen` sessions with
 
-```console
+```bash
 $ screen -ls
 ```
 
