@@ -166,6 +166,7 @@ $ screen -ls
 The output will look like this
 
 ```console
+user@hostname:~# screen -ls
 There are screens on:
         20131.pts-0.hostname    (05/30/2022 12:43:27 AM)    (Detached)
         29062.pts-0.hostname    (05/30/2022 12:41:46 AM)    (Detached)
