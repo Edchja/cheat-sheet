@@ -35,12 +35,15 @@ Next time it will be used to update and launch Tor Browser.
 
 ## Screen
 
-- [Install Screen]()
-- [Start Screen]()
-- [Start Named Screen]()
-- [Useful Screen Commands]()
-
 **Screen** is a terminal multiplexer. In other words, it means that you can can start a screen session and then open any number of windows (virtual terminals) inside that session. Processes running in Screen will continue to run when their window is not visible even if you get disconnected.
+
+- [Install Screen](#install-screen)
+- [Start Screen](#start-screen)
+- [Start Named Screen](#start-named-session)
+- [Useful Screen Commands](#useful-screen-commands)
+- [Window Splitting](#window-splitting)
+- [Detach from a Screen session](#detach-from-screen-session)
+- [Reattach to a Screen session](#reattach-to-a-screen-session)
 
 ### Install Screen
 
@@ -71,3 +74,106 @@ $ screen -S session_name
 ### Useful Screen Commands
 
 > :bulb: **Tip:** You can use `man` to see a detailed documentation about `screen`.
+
+To create a new window with shell
+
+```
+Ctrl + a + c
+```
+
+To list all windows
+
+```
+Ctrl + a + "
+```
+
+Switch to a window
+
+```
+Ctrl + a + 0..9
+```
+
+Rename a current window
+
+```
+Ctrl + a + A
+```
+
+### Window splitting
+
+Split current region horizontally into two regions
+
+```
+Ctrl + a + S
+```
+
+Split current region vertically into two regions
+
+```
+Ctrl + a + |
+```
+
+Switch the input focus to the next regions
+
+```
+Ctrl + a + Tab
+```
+
+Toggle between the current and previous windows
+
+```
+Ctrl + a Ctrl + a
+```
+
+Close all regions except the current one
+
+```
+Ctrl + a + Q
+```
+
+Close the current region
+
+```
+Ctrl + a + X
+```
+
+### Detach from Screen session
+
+You can detach from a `screen` session anytime by typing
+
+```
+Ctrl + a + d
+```
+
+The program running in the screen session will continue to run after you detach from the session.
+
+### Reattach to a Screen session
+
+To resume your `screen` session use the following command
+
+```bash
+$ screen -r
+```
+
+If you have multiple screen sessions running on your machine, you will need to append the screen session ID after the `r` switch.
+
+To find the session ID list the current running `screen` sessions with
+
+```console
+$ screen -ls
+```
+
+The output will look like this
+
+```console
+There are screens on:
+        20131.pts-0.hostname    (05/30/2022 12:43:27 AM)    (Detached)
+        29062.pts-0.hostname    (05/30/2022 12:41:46 AM)    (Detached)
+2 Sockets in /run/screen/S-root.
+```
+
+If you want to restore screen `29062.pts-0`, then type the following command
+
+```bash
+$ screen -r 29062
+```

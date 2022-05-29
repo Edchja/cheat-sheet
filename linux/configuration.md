@@ -80,6 +80,7 @@ For the changes to be loaded, you need to enter `source ~/.zshrc` in your termin
 - [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Tor Browser](/linux/tools.md#tor-browser)
 - VPN Client
+- [Screen](/linux/tools.md#screen)
 
 ## Oh-My-Zsh
 
