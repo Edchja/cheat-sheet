@@ -178,3 +178,26 @@ If you want to restore screen `29062.pts-0`, then type the following command
 ```bash
 $ screen -r 29062
 ```
+
+## SSH
+
+**SSH** also known as Secure Shell, is a network protocol that gives users, a secure way to access a computer over an unsecured network. **SSH** provides strong password authentication and public key verification, as well as encrypted data communication between two computers connecting over an open network.
+
+Secure Shell was created to replace insecure terminal emulation or login programs, such as [Telnet](https://wikipedia.org/wiki/Telnet) and [rsh](https://wikipedia.org/wiki/Remote_Shell) (remote shell). **SSH** enables the same functions like logging in to and running terminal sessions on remote systems. **SSH** also replaces file transfer programs, such as File Transfer Protocol ([FTP](https://wikipedia.org/wiki/File_Transfer_Protocol)) and rcp (remote copy).
+
+The most basic use of `SSH` is to connect to a remote host for a terminal session. The command would be
+
+```bash
+$ ssh UserName@server.example.com
+```
+
+This command will establish a connection between the local host and the server, the user will be prompted with the remote host's public key fingerprint
+
+```bash
+The authentication of host 'sample.ssh.com' cannot be established.
+ECDSA key fingerprint is SHA256:fIeOO+66eOvuFtoF54z4UT7gS3oTTbrO0sxfxvhzBHw.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+If you answer with _yes_, the session will continue and the host key is stored in the local system `known_hosts` file. This file is located in your home directory and is called `~/.ssh/known_hosts`.
+Once the key has been stored in the known_hosts file, the client can connect directly to that server again without need for any approvals.

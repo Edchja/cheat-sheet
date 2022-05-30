@@ -9,6 +9,7 @@ This guide will demonstrate how to configure a linux distribution.
 - [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
 - [Oh-My-Zsh](#oh-my-zsh)
+- [SSH](/linux/tools.md#ssh)
 
 ## Getting Started
 
