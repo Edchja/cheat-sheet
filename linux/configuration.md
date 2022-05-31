@@ -1,6 +1,6 @@
 # Linux Configuration
 
-This guide will demonstrate how to configure a linux distribution.
+This guide will demonstrate how to configure a Linux distribution.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ This guide will demonstrate how to configure a linux distribution.
 
 ## Getting Started
 
-1. Install a linux distribution. _I recommend [Kali](https://www.kali.org/get-kali) linux._
+1. Install a Linux distribution. _I recommend [Kali](https://www.kali.org/get-kali) Linux._
 2. Upgrade the system. _[See basic commands](#basic-commands)_
 3. Install software. _[Useful software](#useful-software-and-tools)_
 
@@ -39,7 +39,7 @@ Upgrade your system:
 $ sudo apt dist-upgrade -y
 ```
 
-Change keyboard layout for example to german:
+Change keyboard layout, for example to german:
 
 ```bash
 $ sudo setxkbmap -layout de
@@ -63,7 +63,7 @@ function apt-upd {
         }
 ```
 
-To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh
+To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that, you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh
 
 ```bash
 if [ -f ~/.zsh_aliases ]; then
@@ -102,7 +102,7 @@ $ sudo apt install zsh -y
 
 ### Install Oh-My-Zsh
 
-After that, you can install Oh-My-Zsh from [Github](https://github.com/ohmyzsh/ohmyzsh)
+After that, you can install Oh-My-Zsh from [GitHub](https://github.com/ohmyzsh/ohmyzsh)
 
 ```bash
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -126,7 +126,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Install Plugins
 
-All plugins listed on the [plugins Github](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) page are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
+All plugins listed on the [plugins GitHub](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) page are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
 
 > :warning: **Warning:** Add plugins wisely, as too many plugins will slow down the shell startup.
 
@@ -155,3 +155,5 @@ Download and unzip a patched font with glyphs (icons) from [Nerd Font](https://n
 Move the **.ttf** files to `~/.local/share/fonts`, maybe you need to create a _fonts_ directory first via `mkdir -p ~/.local/share/fonts`.
 
 Set up the installed font in your terminal as default.
+
+## Configure SSH Keys

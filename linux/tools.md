@@ -13,7 +13,7 @@ The Tor Browser is a internet browser that allows users to surf the web _anonymo
 
 Tor Browser can be installed very easily by using `apt`.
 
-Open a terminal then run the following commands:
+Open a terminal, then run the following commands:
 
 ```bash
 $ sudo apt update
@@ -26,8 +26,8 @@ After the process completes, run the following command as **non-root** user:
 $ torbrowser-launcher
 ```
 
-The first time, it will download and install Tor Browser including the signature verification.
-Next time it will be used to update and launch Tor Browser.
+The first time, it will download and install Tor Browser, including the signature verification.
+Next time, it will be used to update and launch Tor Browser.
 
 > :warning: **Warning:** It is true that you are more **anonymous** when using the Tor Browser instead of a normal browser like Chrome or Firefox.
 >
@@ -35,7 +35,7 @@ Next time it will be used to update and launch Tor Browser.
 
 ## Screen
 
-**Screen** is a terminal multiplexer. In other words, it means that you can can start a screen session and then open any number of windows (virtual terminals) inside that session. Processes running in Screen will continue to run when their window is not visible even if you get disconnected.
+**Screen** is a terminal multiplexer. In other words, it means that you can start a screen session and then open any number of windows (virtual terminals) inside that session. Processes running in Screen will continue to run when their window is not visible, even if you get disconnected.
 
 - [Install Screen](#install-screen)
 - [Start Screen](#start-screen)
@@ -65,7 +65,7 @@ Ctrl + a (Shift) ?
 
 ### Start Named Session
 
-You can as well start a named session for example if you are running multiple screen sessions. To create a named session:
+You can as well start a named session, for example if you are running multiple screen sessions. To create a named session:
 
 ```bash
 $ screen -S session_name
@@ -149,7 +149,7 @@ The program running in the screen session will continue to run after you detach 
 
 ### Reattach to a Screen session
 
-To resume your `screen` session use the following command
+To resume your `screen` session, use the following command
 
 ```bash
 $ screen -r
@@ -157,7 +157,7 @@ $ screen -r
 
 If you have multiple screen sessions running on your machine, you will need to append the screen session ID after the `r` switch.
 
-To find the session ID list the current running `screen` sessions with
+To find the session ID, list the current running `screen` sessions with
 
 ```bash
 $ screen -ls
@@ -181,9 +181,15 @@ $ screen -r 29062
 
 ## SSH
 
+- [What is SSH](#what-is-ssh)
+- [What are SSH keys](#what-are-ssh-keys)
+- [Configure SSH keys](/linux/configuration.md#configure-ssh-keys)
+
+### What is SSH
+
 **SSH** also known as Secure Shell, is a network protocol that gives users, a secure way to access a computer over an unsecured network. **SSH** provides strong password authentication and public key verification, as well as encrypted data communication between two computers connecting over an open network.
 
-Secure Shell was created to replace insecure terminal emulation or login programs, such as [Telnet](https://wikipedia.org/wiki/Telnet) and [rsh](https://wikipedia.org/wiki/Remote_Shell) (remote shell). **SSH** enables the same functions like logging in to and running terminal sessions on remote systems. **SSH** also replaces file transfer programs, such as File Transfer Protocol ([FTP](https://wikipedia.org/wiki/File_Transfer_Protocol)) and rcp (remote copy).
+Secure Shell was created to replace insecure terminal emulation or login programs, such as [Telnet](https://wikipedia.org/wiki/Telnet) and [rsh](https://wikipedia.org/wiki/Remote_Shell) (remote shell). **SSH** enables the same functions, like logging in to and running terminal sessions on remote systems. **SSH** also replaces file transfer programs, such as File Transfer Protocol ([FTP](https://wikipedia.org/wiki/File_Transfer_Protocol)) and rcp (remote copy).
 
 The most basic use of `SSH` is to connect to a remote host for a terminal session. The command would be
 
@@ -193,7 +199,7 @@ $ ssh UserName@server.example.com
 
 This command will establish a connection between the local host and the server, the user will be prompted with the remote host's public key fingerprint
 
-```bash
+```console
 The authentication of host 'sample.ssh.com' cannot be established.
 ECDSA key fingerprint is SHA256:fIeOO+66eOvuFtoF54z4UT7gS3oTTbrO0sxfxvhzBHw.
 Are you sure you want to continue connecting (yes/no)?
@@ -201,3 +207,13 @@ Are you sure you want to continue connecting (yes/no)?
 
 If you answer with _yes_, the session will continue and the host key is stored in the local system `known_hosts` file. This file is located in your home directory and is called `~/.ssh/known_hosts`.
 Once the key has been stored in the known_hosts file, the client can connect directly to that server again without need for any approvals.
+
+### What are SSH keys
+
+**SSH keys** are comparable to a very long password. SSH keys always come as a pair, and every pair is made up of a `private` and `public` key. If you want to connect to an SSH server, the `private` key will remain on the host machine and will be used to **decrypt** information that is exchanged over the **SSH** protocol.
+
+> :warning: **Warning:** Private keys should always be handled securely - i.e. the system is fully encrypted, and the **private** key is secured with a passphrase.
+
+The `public` key is used to **encrypt** information, it can be shared, and is used by the user as well as by the server. The key will be stored in an `authorized_keys` file on the server, which can contain a list of authorized public keys. The file is usually located in `~/.ssh/authorized_keys`.
+
+If you want to setup SSH keys, refer to [configure SSH keys](/linux/configuration.md#configure-ssh-keys).
