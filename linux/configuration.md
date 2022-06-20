@@ -9,7 +9,8 @@ This guide will demonstrate how to configure a Linux distribution.
 - [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
 - [Oh-My-Zsh](#oh-my-zsh)
-- [SSH](/linux/tools.md#ssh)
+- [SSH](/linux/tools.md#secure-shell-protocol-ssh)
+- [Configure SSH](#configure-public-key-authentication)
 
 ## Getting Started
 
@@ -156,4 +157,60 @@ Move the **.ttf** files to `~/.local/share/fonts`, maybe you need to create a _f
 
 Set up the installed font in your terminal as default.
 
-## Configure SSH Keys
+## Configure public key authentication
+
+To setup `SSH key authentication`, you will need to execute the following commands.
+
+First, you have to create a `private` and `public` key pair.
+
+```bash
+$ ssh-keygen -t ed25519 -f ~/.ssh/<certificate-name> -C "your e-mail address or pc name"
+```
+
+> :tip: **Tip:** You can use `man ssh-keygen` to get a detailed description about all possible parameters and options.
+
+The output will look like this:
+
+```terminal
+$ ssh-keygen -t ed25519 -f ~/.ssh/test
+Generating public/private ed25519 key pair.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/<name>/.ssh/test
+Your public key has been saved in /home/<name>/.ssh/test.pub
+The key fingerprint is:
+SHA256:Jr7aTrZyDNxDEW8vQHl4YEJ/a8n0kiUzTXjB9J6y814 edgar@BEAST-PC
+The key's randomart image is:
++--[ED25519 256]--+
+|   .o == ++.     |
+|     =+.+oo.     |
+|      o+O.o .    |
+|      .* @ . .   |
+|   . o. S + o    |
+|    o.o+ o o     |
+|     o+.  o   E  |
+|    .+oo   o .   |
+|    .==    .o    |
++----[SHA256]-----+
+```
+
+After that, you can save the `public key` to GitHub, on your linux server or somewhere else.
+
+If the setup is done for the first time, you will have to create a `config` file. The config file is needed, so that the host can establish a connection with the server. If you want to have an ssh key for each service or application, you can do this by adding them to the config file.
+
+The convention of the `config` file will look like this for each entry:
+
+```bash
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/test
+```
+
+The `Host` keyword restricts the following declarations to be only for those hosts that match with the passed host name on the command line. It can be used to declare aliases thus that will not work on repository services like GitHub, GitLab, Bitbucket etc.
+
+`HostName` specifies the real host name to log into. Numeric IP addresses are also permitted, e.g. `120.345.678.901`.
+
+With the `User` keyword, it is possible to set a username which will be used to log into a server. It can simplify the use of multiple usernames like `root`, `other-user`, etc. With that, you don't need to pass the username on the command line.
+
+Last but not least, the `IdentityFile` keyword. That keyword specifies a file from which the user's **private key** is read when using public key authentication.

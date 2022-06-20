@@ -6,6 +6,7 @@ This is a collection about various Linux tools.
 
 - [Tor Browser](#tor-browser)
 - [Screen Tool](#screen)
+- [Secure Shell Protocol (SSH)](#secure-shell-protocol-ssh)
 
 ## Tor Browser
 
@@ -179,11 +180,11 @@ If you want to restore screen `29062.pts-0`, then type the following command
 $ screen -r 29062
 ```
 
-## SSH
+## Secure Shell Protocol (SSH)
 
 - [What is SSH](#what-is-ssh)
 - [What are SSH keys](#what-are-ssh-keys)
-- [Configure SSH keys](/linux/configuration.md#configure-ssh-keys)
+- [Configure public key authentication](/linux/configuration.md#configure-public-key-authentication)
 
 ### What is SSH
 
@@ -216,4 +217,4 @@ Once the key has been stored in the known_hosts file, the client can connect dir
 
 The `public` key is used to **encrypt** information, it can be shared, and is used by the user as well as by the server. The key will be stored in an `authorized_keys` file on the server, which can contain a list of authorized public keys. The file is usually located in `~/.ssh/authorized_keys`.
 
-If you want to setup SSH keys, refer to [configure SSH keys](/linux/configuration.md#configure-ssh-keys).
+If you want to setup SSH keys, check the [configure public key authentication](/linux/configuration.md#configure-public-key-authentication) section.

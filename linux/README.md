@@ -11,13 +11,13 @@ This is a collection about various Linux topics.
 - [Basic Linux commands](/linux/configuration.md#basic-commands)
 - [Useful Software](/linux/configuration.md#useful-software-and-tools)
 - [Setting up Oh-My-Zsh](configuration.md#oh-my-zsh)
-- [Configure SSH keys](configuration.md#configure-ssh-keys)
+- [Configure public key authentication](configuration.md#configure-public-key-authentication)
 
 ### Tools
 
 - [Tor Browser](tools.md#tor-browser)
 - [Screen](tools.md#screen)
-- [SSH](tools.md#ssh)
+- [Secure Shell Protocol (SSH)](tools.md#secure-shell-protocol-ssh)
 
 ### Docker
 
