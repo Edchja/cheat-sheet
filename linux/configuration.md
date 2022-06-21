@@ -171,7 +171,7 @@ $ ssh-keygen -t ed25519 -f ~/.ssh/<certificate-name> -C "your e-mail address or 
 
 The output will look like this:
 
-```terminal
+```console
 $ ssh-keygen -t ed25519 -f ~/.ssh/test
 Generating public/private ed25519 key pair.
 Enter passphrase (empty for no passphrase):
