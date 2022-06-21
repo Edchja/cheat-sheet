@@ -9,8 +9,8 @@ This guide will demonstrate how to configure a Linux distribution.
 - [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
 - [Oh-My-Zsh](#oh-my-zsh)
-- [SSH](/linux/tools.md#secure-shell-protocol-ssh)
-- [Configure SSH](#configure-public-key-authentication)
+- [Secure Shell Protocol (SSH)](/linux/tools.md#secure-shell-protocol-ssh)
+- [Configure public key authentication](#configure-public-key-authentication)
 
 ## Getting Started
 
