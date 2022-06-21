@@ -23,7 +23,7 @@ $ sudo apt install -y tor torbrowser-launcher
 
 After the process completes, run the following command as **non-root** user:
 
-```console
+```bash
 $ torbrowser-launcher
 ```
 
@@ -200,7 +200,7 @@ $ ssh UserName@server.example.com
 
 This command will establish a connection between the local host and the server, the user will be prompted with the remote host's public key fingerprint
 
-```console
+```bash
 The authentication of host 'sample.ssh.com' cannot be established.
 ECDSA key fingerprint is SHA256:fIeOO+66eOvuFtoF54z4UT7gS3oTTbrO0sxfxvhzBHw.
 Are you sure you want to continue connecting (yes/no)?
