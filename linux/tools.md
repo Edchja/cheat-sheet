@@ -5,8 +5,8 @@ This is a collection about various Linux tools.
 ## Table of Contents
 
 - [Tor Browser](#tor-browser)
-- [Screen Tool](#screen)
 - [Secure Shell Protocol (SSH)](#secure-shell-protocol-ssh)
+- [Screen Tool](#screen)
 
 ## Tor Browser
 
