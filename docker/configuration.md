@@ -85,7 +85,7 @@ This command downloads a test image and runs it in a container. When the contain
 ## Post-installation steps for Linux
 
 - [Manage Docker as **non-root**](#manage-docker-as-non-root)
-- [Configure Docker to start on boot](#configure-docker-to-start-on-boot)
+- [Configure Docker to start on boot](#configure-docker-to-start-on-boot-up)
 
 This section is about the steps that can be performed after installing Docker Engine so that it works better with Linux.
 
@@ -122,18 +122,18 @@ $ docker run hello-world
 
 This command downloads a test image and runs it in a container. When the container runs, it prints a message and exits.
 
-### Configure Docker to start on boot
+### Configure Docker to start on boot up
 
 To automatically start **Docker** and **Containerd** on boot:
 
-```bash
+```console
 $ sudo systemctl enable docker.service
 $ sudo systemctl enable containerd.service
 ```
 
 To disable this behavior, use `disable` instead:
 
-```bash
+```console
 $ sudo systemctl disable docker.service
 $ sudo systemctl disable containerd.service
 ```

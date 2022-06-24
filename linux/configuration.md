@@ -159,7 +159,7 @@ Set up the installed font in your terminal as default.
 
 ## Configure public key authentication
 
-To setup `SSH key authentication`, you will need to execute the following commands.
+To setup SSH _public key authentication_, you will need to execute the following commands.
 
 First, you have to create a `private` and `public` key pair.
 
@@ -167,7 +167,7 @@ First, you have to create a `private` and `public` key pair.
 $ ssh-keygen -t ed25519 -f ~/.ssh/<certificate-name> -C "your e-mail address or pc name"
 ```
 
-> :tip: **Tip:** You can use `man ssh-keygen` to get a detailed description about all possible parameters and options.
+> :bulb: **Tip:** You can use `man ssh-keygen` to get a detailed description about all possible parameters and options.
 
 The output will look like this:
 
@@ -211,6 +211,6 @@ The `Host` keyword restricts the following declarations to be only for those hos
 
 `HostName` specifies the real host name to log into. Numeric IP addresses are also permitted, e.g. `120.345.678.901`.
 
-With the `User` keyword, it is possible to set a username which will be used to log into a server. It can simplify the use of multiple usernames like `root`, `other-user`, etc. With that, you don't need to pass the username on the command line.
+With the `User` keyword, it is possible to set a username which will be used to log into a server. It can simplify the use of multiple usernames like _root_, _non-root-users_, etc. With that, you don't need to pass the username on the command line.
 
 Last but not least, the `IdentityFile` keyword. That keyword specifies a file from which the user's **private key** is read when using public key authentication.
