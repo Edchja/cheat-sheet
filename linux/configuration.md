@@ -127,7 +127,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Install Plugins
 
-All plugins listed on the [plugins GitHub](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) page are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
+All [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) listed on GitHub are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
 
 > :warning: **Warning:** Add plugins wisely, as too many plugins will slow down the shell startup.
 
@@ -213,4 +213,4 @@ The `Host` keyword restricts the following declarations to be only for those hos
 
 With the `User` keyword, it is possible to set a username which will be used to log into a server. It can simplify the use of multiple usernames like _root_, _non-root-users_, etc. With that, you don't need to pass the username on the command line.
 
-Last but not least, the `IdentityFile` keyword. That keyword specifies a file from which the user's **private key** is read when using public key authentication.
+Last but not least, the `IdentityFile` keyword. That keyword specifies a file from which the user's **private key** is read when using _public key authentication_.
