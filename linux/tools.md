@@ -7,6 +7,7 @@ This is a collection about various Linux tools.
 - [Tor Browser](#tor-browser)
 - [Secure Shell Protocol (SSH)](#secure-shell-protocol-ssh)
 - [Screen Tool](#screen)
+- [Sherlock - Find Usernames Across Social Networks](#sherlock)
 
 ## Tor Browser
 
@@ -218,3 +219,71 @@ If you want to restore screen `29062.pts-0`, then type the following command
 ```bash
 $ screen -r 29062
 ```
+
+## Sherlock
+
+**Sherlock** is a [python](https://www.python.org/) tool, that can find social media accounts by username across various [social networks](https://github.com/sherlock-project/sherlock/blob/master/sites.md).
+
+- [Install Sherlock](#install-sherlock)
+- [How to use Sherlock](#sherlock-usage)
+
+### Install Sherlock
+
+Sherlock can be installed very easily by using the following commands:
+
+Clone the [official repository](https://github.com/sherlock-project/sherlock) first:
+
+```bash
+$ git clone https://github.com/sherlock-project/sherlock.git
+```
+
+After that change the working directory to sherlock:
+
+```bash
+$ cd sherlock
+```
+
+You may need to install `python3` and `pip` first, before you install the necessary requirements:
+
+Update your system:
+
+```bash
+$ apt update
+```
+
+Then install python3 and pip:
+
+```bash
+$ apt install python3
+$ apt install python3-pip
+```
+
+The last step is installing the python requirements:
+
+```bash
+$ python3 -m pip install -r requirements.txt
+```
+
+### Sherlock Usage
+
+A detailed description about all possible arguments `Sherlock` provides can be looked up with:
+
+```bash
+$ python3 sherlock --help
+```
+
+Or on the official [GitHub repository](https://github.com/sherlock-project/sherlock#usage).
+
+To search only for one user:
+
+```bash
+$ python3 sherlock user123
+```
+
+To search for more than one user:
+
+```bash
+$ python3 sherlock user1 user2 user3 ...
+```
+
+> If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user123.txt`).

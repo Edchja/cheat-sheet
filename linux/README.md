@@ -18,6 +18,7 @@ This is a collection about various Linux topics.
 - [Tor Browser](tools.md#tor-browser)
 - [Screen](tools.md#screen)
 - [Secure Shell Protocol (SSH)](tools.md#secure-shell-protocol-ssh)
+- [Sherlock - Find Usernames Across Social Networks](tools.md#sherlock)
 
 ### Docker
 
