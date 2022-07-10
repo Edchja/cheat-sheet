@@ -214,3 +214,28 @@ The `Host` keyword restricts the following declarations to be only for those hos
 With the `User` keyword, it is possible to set a username which will be used to log into a server. It can simplify the use of multiple usernames like _root_, _non-root-users_, etc. With that, you don't need to pass the username on the command line.
 
 Last but not least, the `IdentityFile` keyword. That keyword specifies a file from which the user's **private key** is read when using _public key authentication_.
+
+After you've set up you SSH key, you can test your connection e.g. GitHub with the following command:
+
+```bash
+$ ssh -T git@github.com
+```
+
+It will try to authenticate with your SSH key passphrase you created earlier.
+You may see a warning like this:
+
+```console
+The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
+You can _verify_ if the fingerprint in the message matches with [GitHub's public key fingerprint](https://docs.github.com/en/github/authenticating-to-github/githubs-ssh-key-fingerprints). If it does, then type `yes`:
+
+```console
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+> **Note:** The remote command should exit with code 1.
+
+Verify that the resulting message contains your username. If you receive a "permission denied" message, refer to [Error: Permission denied (publickey)](https://docs.github.com/en/articles/error-permission-denied-publickey).
