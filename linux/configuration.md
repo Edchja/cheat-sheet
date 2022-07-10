@@ -238,4 +238,4 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 
 > **Note:** The remote command should exit with code 1.
 
-Verify that the resulting message contains your username. If you receive a "permission denied" message, refer to [Error: Permission denied (publickey)](https://docs.github.com/en/articles/error-permission-denied-publickey).
+Verify that the resulting message contains your **username**. If you receive a "permission denied" message, refer to [Error: Permission denied (publickey)](https://docs.github.com/en/articles/error-permission-denied-publickey).
