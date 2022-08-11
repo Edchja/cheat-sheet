@@ -48,7 +48,7 @@ Next time, it will be used to update and launch Tor Browser.
 
 Secure Shell was created to replace insecure terminal emulation or login programs, such as [Telnet](https://wikipedia.org/wiki/Telnet) and [rsh](https://wikipedia.org/wiki/Remote_Shell) (remote shell). **SSH** enables the same functions, like logging in to and running terminal sessions on remote systems. **SSH** also replaces file transfer programs, such as File Transfer Protocol ([FTP](https://wikipedia.org/wiki/File_Transfer_Protocol)) and rcp (remote copy).
 
-The most basic use of `SSH` is to connect to a remote host for a terminal session. The command would be
+The most basic use of `SSH` is to connect to a remote host for a terminal session. The command for that would be
 
 ```bash
 ssh UserName@server.example.com
@@ -63,17 +63,17 @@ Are you sure you want to continue connecting (yes/no)?
 ```
 
 If you answer with _yes_, the session will continue and the host key is stored in the local system `known_hosts` file. This file is located in your home directory and is called `~/.ssh/known_hosts`.
-Once the key has been stored in the known_hosts file, the client can connect directly to that server again without need for any approvals.
+Once the key has been stored in the `known_hosts` file, the client can connect directly to that server again without the need for any approvals.
 
 ### What are SSH keys
 
 **SSH keys** are comparable to a very long password. SSH keys always come as a pair, and every pair is made up of a `private` and `public` key. If you want to connect to an SSH server, the `private` key will remain on the host machine and will be used to **decrypt** information that is exchanged over the **SSH** protocol.
 
-> :warning: **Warning:** Private keys should always be handled securely - i.e. the system is fully encrypted, and the **private** key is secured with a passphrase.
+> :warning: **Warning:** Private keys should always be handled securely - i.e. the system is fully encrypted and the **private** key is secured with a passphrase.
 
 The `public` key is used to **encrypt** information, it can be shared, and is used by the user as well as by the server. The key will be stored in an `authorized_keys` file on the server, which can contain a list of authorized public keys. The file is usually located in `~/.ssh/authorized_keys`.
 
-If you want to setup SSH keys, check the [configure public key authentication](/linux/configuration.md#configure-public-key-authentication) section.
+If you want to setup SSH keys, check the [configure public key authentication](./configuration.md#configure-public-key-authentication) section.
 
 ## Visual Studio Code
 
@@ -236,7 +236,7 @@ screen -r 29062
 
 Sherlock can be installed very easily by using the following commands:
 
-Clone the [official repository](https://github.com/sherlock-project/sherlock) first:
+Clone the [official repository](https://github.com/sherlock-project/sherlock) into a desired location first:
 
 ```bash
 git clone https://github.com/sherlock-project/sherlock.git
@@ -248,7 +248,7 @@ After that change the working directory to sherlock:
 cd sherlock
 ```
 
-You may need to install `python3` and `pip` first, before you install the necessary requirements:
+:bulb: You may need to install `python3` and `pip` first, before you install the necessary requirements:
 
 Update your system:
 
@@ -291,4 +291,4 @@ To search for more than one user:
 python3 sherlock user1 user2 user3 ...
 ```
 
-> If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user123.txt`).
+> If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user1.txt`).
