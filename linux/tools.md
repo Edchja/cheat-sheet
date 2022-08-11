@@ -6,6 +6,7 @@ This is a collection about various Linux tools.
 
 - [Tor Browser](#tor-browser)
 - [Secure Shell Protocol (SSH)](#secure-shell-protocol-ssh)
+- [Visual Studio Code](#visual-studio-code)
 - [Screen Tool](#screen)
 - [Sherlock - Find Usernames Across Social Networks](#sherlock)
 
@@ -73,6 +74,10 @@ Once the key has been stored in the known_hosts file, the client can connect dir
 The `public` key is used to **encrypt** information, it can be shared, and is used by the user as well as by the server. The key will be stored in an `authorized_keys` file on the server, which can contain a list of authorized public keys. The file is usually located in `~/.ssh/authorized_keys`.
 
 If you want to setup SSH keys, check the [configure public key authentication](/linux/configuration.md#configure-public-key-authentication) section.
+
+## Visual Studio Code
+
+**[Visual Studio Code](https://code.visualstudio.com)** is a free, powerful code editor that runs on every machine.
 
 ## Screen
 
