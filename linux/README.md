@@ -4,7 +4,7 @@ This is a collection about various Linux topics.
 
 ## Table of Contents
 
-### Linux
+### Linux Configuration
 
 - [Configure Linux](/linux/configuration.md#linux-configuration)
 - [Getting started with Linux](/linux/configuration.md#getting-started)
@@ -24,6 +24,6 @@ This is a collection about various Linux topics.
 
 - [Configure Docker](/docker/configuration.md#docker-configuration)
 - [Uninstall old versions](/docker/configuration.md#uninstall-old-versions)
-- [Install Docker](/docker/configuration.md#install-docker-engine)
+- [Install Docker](/docker/configuration.md#install-docker)
 - [Post-installation steps for Linux](/docker/configuration.md#post-installation-steps-for-linux)
 - [Uninstall Docker](/docker/configuration.md#uninstall-docker-engine)

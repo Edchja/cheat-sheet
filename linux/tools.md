@@ -18,14 +18,14 @@ Tor Browser can be installed very easily by using `apt`.
 Open a terminal, then run the following commands:
 
 ```bash
-$ sudo apt update
-$ sudo apt install -y tor torbrowser-launcher
+sudo apt update
+sudo apt install -y tor torbrowser-launcher
 ```
 
 After the process completes, run the following command as **non-root** user:
 
 ```bash
-$ torbrowser-launcher
+torbrowser-launcher
 ```
 
 The first time, it will download and install Tor Browser, including the signature verification.
@@ -50,7 +50,7 @@ Secure Shell was created to replace insecure terminal emulation or login program
 The most basic use of `SSH` is to connect to a remote host for a terminal session. The command would be
 
 ```bash
-$ ssh UserName@server.example.com
+ssh UserName@server.example.com
 ```
 
 This command will establish a connection between the local host and the server, the user will be prompted with the remote host's public key fingerprint
@@ -91,8 +91,8 @@ If you want to setup SSH keys, check the [configure public key authentication](/
 You can install `Screen` by using the `apt` manager
 
 ```bash
-$ sudo apt update
-$ sudo apt install screen
+sudo apt update
+sudo apt install screen
 ```
 
 ### Start Screen
@@ -109,7 +109,7 @@ Ctrl + a (Shift) ?
 You can as well start a named session, for example if you are running multiple screen sessions. To create a named session:
 
 ```bash
-$ screen -S session_name
+screen -S session_name
 ```
 
 ### Useful Screen Commands
@@ -193,7 +193,7 @@ The program running in the screen session will continue to run after you detach 
 To resume your `screen` session, use the following command
 
 ```bash
-$ screen -r
+screen -r
 ```
 
 If you have multiple screen sessions running on your machine, you will need to append the screen session ID after the `r` switch.
@@ -201,7 +201,7 @@ If you have multiple screen sessions running on your machine, you will need to a
 To find the session ID, list the current running `screen` sessions with
 
 ```bash
-$ screen -ls
+screen -ls
 ```
 
 The output will look like this
@@ -217,7 +217,7 @@ There are screens on:
 If you want to restore screen `29062.pts-0`, then type the following command
 
 ```bash
-$ screen -r 29062
+screen -r 29062
 ```
 
 ## Sherlock
@@ -234,13 +234,13 @@ Sherlock can be installed very easily by using the following commands:
 Clone the [official repository](https://github.com/sherlock-project/sherlock) first:
 
 ```bash
-$ git clone https://github.com/sherlock-project/sherlock.git
+git clone https://github.com/sherlock-project/sherlock.git
 ```
 
 After that change the working directory to sherlock:
 
 ```bash
-$ cd sherlock
+cd sherlock
 ```
 
 You may need to install `python3` and `pip` first, before you install the necessary requirements:
@@ -248,20 +248,20 @@ You may need to install `python3` and `pip` first, before you install the necess
 Update your system:
 
 ```bash
-$ apt update
+apt update
 ```
 
 Then install python3 and pip:
 
 ```bash
-$ apt install python3
-$ apt install python3-pip
+apt install python3
+apt install python3-pip
 ```
 
 The last step is installing the python requirements:
 
 ```bash
-$ python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### Sherlock Usage
@@ -269,7 +269,7 @@ $ python3 -m pip install -r requirements.txt
 A detailed description about all possible arguments `Sherlock` provides can be looked up with:
 
 ```bash
-$ python3 sherlock --help
+python3 sherlock --help
 ```
 
 Or on the official [GitHub repository](https://github.com/sherlock-project/sherlock#usage).
@@ -277,13 +277,13 @@ Or on the official [GitHub repository](https://github.com/sherlock-project/sherl
 To search only for one user:
 
 ```bash
-$ python3 sherlock user123
+python3 sherlock user123
 ```
 
 To search for more than one user:
 
 ```bash
-$ python3 sherlock user1 user2 user3 ...
+python3 sherlock user1 user2 user3 ...
 ```
 
 > If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user123.txt`).

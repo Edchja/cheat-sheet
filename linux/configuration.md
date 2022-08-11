@@ -25,25 +25,25 @@ This guide will demonstrate how to configure a Linux distribution.
 Updating all installed packages:
 
 ```bash
-$ sudo apt update
+sudo apt update
 ```
 
 Upgrade packages:
 
 ```bash
-$ sudo apt full-upgrade -y
+sudo apt full-upgrade -y
 ```
 
 Upgrade your system:
 
 ```bash
-$ sudo apt dist-upgrade -y
+sudo apt dist-upgrade -y
 ```
 
 Change keyboard layout, for example to german:
 
 ```bash
-$ sudo setxkbmap -layout de
+sudo setxkbmap -layout de
 ```
 
 ### Update Script
@@ -98,7 +98,7 @@ For the changes to be loaded, you need to enter `source ~/.zshrc` in your termin
 If _Zsh_ isn't already pre-installed, install by using the apt manager
 
 ```bash
-$ sudo apt install zsh -y
+sudo apt install zsh -y
 ```
 
 ### Install Oh-My-Zsh
@@ -106,7 +106,7 @@ $ sudo apt install zsh -y
 After that, you can install Oh-My-Zsh from [GitHub](https://github.com/ohmyzsh/ohmyzsh)
 
 ```bash
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ### Configure Oh-My-Zsh
@@ -116,7 +116,7 @@ First, change the default theme to [Powerlevel10k](https://github.com/romkatv/po
 Clone the repository into the directory `.oh-my-zsh/custom/themes`
 
 ```bash
-$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
 Edit your `~/.zshrc` file and replace the theme with
@@ -164,7 +164,7 @@ To setup SSH _public key authentication_, you will need to execute the following
 First, you have to create a `private` and `public` key pair.
 
 ```bash
-$ ssh-keygen -t ed25519 -f ~/.ssh/<certificate-name> -C "your e-mail address or pc name"
+ssh-keygen -t ed25519 -f ~/.ssh/<certificate-name> -C "your e-mail address or pc name"
 ```
 
 > :bulb: **Tip:** You can use `man ssh-keygen` to get a detailed description about all possible parameters and options.
@@ -218,7 +218,7 @@ Last but not least, the `IdentityFile` keyword. That keyword specifies a file fr
 After you've set up you SSH key, you can test your connection e.g. GitHub with the following command:
 
 ```bash
-$ ssh -T git@github.com
+ssh -T git@github.com
 ```
 
 It will try to authenticate with your SSH key passphrase you created earlier.
