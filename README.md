@@ -3,6 +3,7 @@
 Cheat Sheet is a collection about various topics that consists of
 
 - Documentations
+- Wikis
 - Configuration Guides
 - Cheat Sheets
 
@@ -14,6 +15,7 @@ Cheat Sheet is a collection about various topics that consists of
 
 ### Tools
 
+- [Visual Studio Code](linux/tools.md/#visual-studio-code)
 - [Tor Browser](linux/tools.md#tor-browser)
 - [Secure Shell Protocol (SSH)](linux/tools.md#secure-shell-protocol-ssh)
 - [Screen - Terminal Multiplexer](linux/tools.md#screen)

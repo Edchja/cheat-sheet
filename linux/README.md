@@ -15,6 +15,7 @@ This is a collection about various Linux topics.
 
 ### Tools
 
+- [Visual Studio Code](tools.md#visual-studio-code)
 - [Tor Browser](tools.md#tor-browser)
 - [Screen](tools.md#screen)
 - [Secure Shell Protocol (SSH)](tools.md#secure-shell-protocol-ssh)
