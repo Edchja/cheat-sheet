@@ -40,7 +40,7 @@ Next time, it will be used to update and launch Tor Browser.
 
 - [What is SSH](#what-is-ssh)
 - [What are SSH keys](#what-are-ssh-keys)
-- [Configure public key authentication](/linux/configuration.md#configure-public-key-authentication)
+- [Configure public key authentication](./configuration.md#configure-public-key-authentication)
 
 ### What is SSH
 
