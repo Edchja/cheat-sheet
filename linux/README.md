@@ -11,7 +11,7 @@ This is a collection about various Linux topics.
 - [Basic Linux commands](./configuration.md#basic-commands)
 - [Useful Software](./configuration.md#useful-software-and-tools)
 - [Setting up Oh-My-Zsh](./configuration.md#oh-my-zsh)
-- [Configure public key authentication](./configuration.md#configure-public-key-authentication)
+- [Configure Public Key Authentication](./configuration.md#configure-public-key-authentication)
 
 ### Tools
 

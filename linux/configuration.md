@@ -4,7 +4,7 @@ This guide will demonstrate how to configure a Linux distribution.
 
 ## Table of Contents
 
-- [Getting started](#getting-started)
+- [Getting started with Linux](#getting-started)
 - [Basic commands](#basic-commands)
 - [Update script](#update-script)
 - [Useful software](#useful-software-and-tools)
@@ -15,14 +15,17 @@ This guide will demonstrate how to configure a Linux distribution.
 ## Getting Started
 
 1. Install a Linux distribution. _I recommend [Kali](https://www.kali.org/get-kali) Linux._
-2. Upgrade the system. _[See basic commands](#basic-commands)_
+2. Upgrade the system. _[Refer to basic commands](#basic-commands)_
 3. Install software. _[Useful software](#useful-software-and-tools)_
+4. Have fun learning how to use the tools.
 
 ## Basic Commands
 
-> :bulb: **Tip:** You can look up the documentation about commands by using `man`.
+> :bulb: **Tip:** You can look up the documentation of a command by using `man`
 
 Updating all installed packages:
+
+> :bulb: **Tip:** If a command won't work, log in as the **root** user and try again. Since you need elevated privileges to update the system, I would log in as the **root** user.
 
 ```bash
 sudo apt update
@@ -38,6 +41,18 @@ Upgrade your system:
 
 ```bash
 sudo apt dist-upgrade -y
+```
+
+Remove automatically installed packages:
+
+```bash
+sudo apt autoremove -y
+```
+
+Cleanup repositories after updating, deletes unnecessary files:
+
+```bash
+sudo apt auto-clean -y
 ```
 
 Change keyboard layout, for example to german:
@@ -59,12 +74,17 @@ function apt-upd {
         apt-get clean -y;
         apt-get autoclean -y
 
+      if [ $? -eq 0 ]
+      then
         printf '%.0s\n' {1..3}
         echo -e "\e[92mSystem is updated.\e[0m"
+      else
+          echo "Failed to update the system"
+      fi
         }
 ```
 
-To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above. After that, you'll need to add the following code to your `.zshrc` file. So that the code can be used in zsh
+To use that script, create a `.zsh_aliases` file in your **root** directory and paste the code above into it. After that, you'll need to add the following code to your `.zshrc` file. So that the function can be used in your zsh terminal.
 
 ```bash
 if [ -f ~/.zsh_aliases ]; then
@@ -72,7 +92,9 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 ```
 
-For the changes to be loaded, you need to enter `source ~/.zshrc` in your terminal. Now, you can type `apt-upd` as root, and everything will be updated.
+If you want, you can copy the function directly into the `.zshrc` file.
+
+For the changes to be loaded, you need to enter `source ~/.zshrc` in your terminal. Now, you can type `apt-upd` as root and your system will be updated.
 
 ## Useful Software and Tools
 
@@ -127,11 +149,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ### Install Plugins
 
-All [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) listed on GitHub are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
+All plugins listed on [GitHub](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) are pre-installed with Oh-My-Zsh at `~/.oh-my-zsh/plugins`. Custom plugins can be installed at `~/.oh-my-zsh/custom/plugins`. To use a plugin, you can simply add it to the plugins list in your `~/.zshrc` file.
 
-> :warning: **Warning:** Add plugins wisely, as too many plugins will slow down the shell startup.
+> :warning: **Warning:** Add plugins wisely, as too many plugins could slow down the shell startup.
 
-Add a whitespace in between each plugin.
+Add a whitespace in between each plugin in the `.zshrc` file.
 
 ### Recommended Plugins
 
@@ -142,24 +164,33 @@ Already installed:
 - docker
 - docker-compose
 
-Plugins needed to be installed:
+Plugins needed to be cloned:
 
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+```bash
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting \
+${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
-Clone the repositories into `~/.oh-my-zsh/custom/plugins`, see [Install Plugins](#install-plugins).
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
 ### Install a Font
 
 Download and unzip a patched font with glyphs (icons) from [Nerd Font](https://nerdfonts.com).
 
-Move the **.ttf** files to `~/.local/share/fonts`, maybe you need to create a _fonts_ directory first via `mkdir -p ~/.local/share/fonts`.
+Move the **.ttf** files to `~/.local/share/fonts`, maybe you'll need to create a _fonts_ directory first via `mkdir -p ~/.local/share/fonts`.
 
-Set up the installed font in your terminal as default.
+Set up the installed font in your terminal as the default font.
 
 ## Configure public key authentication
 
-To setup SSH _public key authentication_, you will need to execute the following commands.
+To setup _SSH public key authentication_, you will need to execute the following commands.
 
 First, you have to create a `private` and `public` key pair.
 
@@ -194,7 +225,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-After that, you can save the `public key` to GitHub, on your linux server or somewhere else.
+After that, you can save the `public key` to GitHub, on your Linux server or somewhere else.
 
 If the setup is done for the first time, you will have to create a `config` file. The config file is needed, so that the host can establish a connection with the server. If you want to have an ssh key for each service or application, you can do this by adding them to the config file.
 
