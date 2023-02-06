@@ -34,7 +34,8 @@ Next time, it will be used to update and launch Tor Browser.
 
 > :warning: **Warning:** It is true that you are more **anonymous** when using the Tor Browser instead of a normal browser like Chrome or Firefox.
 >
-> But to be more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure _VPN_. A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
+> But to be even more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure _VPN_.
+A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
 
 ## Secure Shell Protocol (SSH)
 
@@ -105,7 +106,7 @@ sudo apt install screen
 To start a **Screen** session, simply type `screen` in your terminal.
 Now that you have a screen session open, you can get a list of commands by typing:
 
-```
+```bash
 Ctrl + a (Shift) ?
 ```
 
@@ -123,25 +124,25 @@ screen -S session_name
 
 To create a new window with shell
 
-```
+```bash
 Ctrl + a + c
 ```
 
 To list all windows
 
-```
+```bash
 Ctrl + a + "
 ```
 
 Switch to a window
 
-```
+```bash
 Ctrl + a + 0..9
 ```
 
 Rename a current window
 
-```
+```bash
 Ctrl + a + A
 ```
 
@@ -149,37 +150,37 @@ Ctrl + a + A
 
 Split current region horizontally into two regions
 
-```
+```bash
 Ctrl + a + S
 ```
 
 Split current region vertically into two regions
 
-```
+```bash
 Ctrl + a + |
 ```
 
 Switch the input focus to the next regions
 
-```
+```bash
 Ctrl + a + Tab
 ```
 
 Toggle between the current and previous windows
 
-```
+```bash
 Ctrl + a Ctrl + a
 ```
 
 Close all regions except the current one
 
-```
+```bash
 Ctrl + a + Q
 ```
 
 Close the current region
 
-```
+```bash
 Ctrl + a + X
 ```
 
@@ -187,7 +188,7 @@ Ctrl + a + X
 
 You can detach from a `screen` session anytime by typing
 
-```
+```bash
 Ctrl + a + d
 ```
 
@@ -242,13 +243,13 @@ Clone the [official repository](https://github.com/sherlock-project/sherlock) in
 git clone https://github.com/sherlock-project/sherlock.git
 ```
 
-After that change the working directory to sherlock:
+After that, change the working directory to sherlock:
 
 ```bash
 cd sherlock
 ```
 
-:bulb: You may need to install `python3` and `pip` first, before you install the necessary requirements:
+:bulb: You may need to install `python3` and `pip` first, before you can install the necessary requirements:
 
 Update your system:
 
@@ -291,4 +292,4 @@ To search for more than one user:
 python3 sherlock user1 user2 user3 ...
 ```
 
-> If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user1.txt`).
+> If accounts are found, they will be stored in an individual text file with the corresponding username (e.g. `user1.txt`, `user2.txt`).
