@@ -6,7 +6,7 @@ This is a collection about various Linux topics.
 
 ### Linux Configuration
 
-- [Configure Linux](./configuration.md#linux-configuration)
+- [Configure Linux after a Clean Install](./configuration.md#linux-configuration)
 - [Getting started with Linux](./configuration.md#getting-started)
 - [Basic Linux commands](./configuration.md#basic-commands)
 - [Useful Software](./configuration.md#useful-software-and-tools)

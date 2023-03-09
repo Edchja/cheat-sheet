@@ -7,7 +7,7 @@ This is a collection about various Linux tools.
 - [Tor Browser](#tor-browser)
 - [Secure Shell Protocol (SSH)](#secure-shell-protocol-ssh)
 - [Visual Studio Code](#visual-studio-code)
-- [Screen Tool](#screen)
+- [Terminal Duplicator: Screen](#screen)
 - [Sherlock - Find Usernames Across Social Networks](#sherlock)
 
 ## Tor Browser
@@ -32,10 +32,10 @@ torbrowser-launcher
 The first time, it will download and install Tor Browser, including the signature verification.
 Next time, it will be used to update and launch Tor Browser.
 
-> :warning: **Warning:** It is true that you are more **anonymous** when using the Tor Browser instead of a normal browser like Chrome or Firefox.
+> :warning:**Warning:** It is true that you are more **anonymous** when using the Tor Browser instead of a normal browser like Chrome or Firefox.
 >
 > But to be even more `secure` and `anonymous` while browsing the web with `Tor Browser`, get a good and secure _VPN_.
-A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
+> A good _VPN_ will encrypt your data and hide your IP address as well. The possibility of being tracked will be very low and hard to accomplish.
 
 ## Secure Shell Protocol (SSH)
 
@@ -63,14 +63,14 @@ ECDSA key fingerprint is SHA256:fIeOO+66eOvuFtoF54z4UT7gS3oTTbrO0sxfxvhzBHw.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-If you answer with _yes_, the session will continue and the host key is stored in the local system `known_hosts` file. This file is located in your home directory and is called `~/.ssh/known_hosts`.
-Once the key has been stored in the `known_hosts` file, the client can connect directly to that server again without the need for any approvals.
+If you answer with **_yes_**, the session will continue and the host key is stored in a file called `known_hosts`. This file is located in your home directory and can be found in `~/.ssh/known_hosts`.
+Once the key has been stored in the `known_hosts` file, the client can connect directly to that server again, without the need for any approvals.
 
 ### What are SSH keys
 
 **SSH keys** are comparable to a very long password. SSH keys always come as a pair, and every pair is made up of a `private` and `public` key. If you want to connect to an SSH server, the `private` key will remain on the host machine and will be used to **decrypt** information that is exchanged over the **SSH** protocol.
 
-> :warning: **Warning:** Private keys should always be handled securely - i.e. the system is fully encrypted and the **private** key is secured with a passphrase.
+> :warning:**Warning:** Private keys should always be handled securely - i.e. the system is fully encrypted and the **private** key is secured with a passphrase.
 
 The `public` key is used to **encrypt** information, it can be shared, and is used by the user as well as by the server. The key will be stored in an `authorized_keys` file on the server, which can contain a list of authorized public keys. The file is usually located in `~/.ssh/authorized_keys`.
 
@@ -86,11 +86,11 @@ If you want to setup SSH keys, check the [configure public key authentication](.
 
 - [Install Screen](#install-screen)
 - [Start Screen](#start-screen)
-- [Start Named Screen](#start-named-session)
+  - [Start Named Screen Session](#start-named-session)
 - [Useful Screen Commands](#useful-screen-commands)
-- [Window Splitting](#window-splitting)
-- [Detach from a Screen session](#detach-from-screen-session)
-- [Reattach to a Screen session](#reattach-to-a-screen-session)
+  - [Window Splitting](#window-splitting)
+  - [Detach from a Screen session](#detach-from-screen-session)
+  - [Reattach to a Screen session](#reattach-to-a-screen-session)
 
 ### Install Screen
 
@@ -110,7 +110,7 @@ Now that you have a screen session open, you can get a list of commands by typin
 Ctrl + a (Shift) ?
 ```
 
-### Start Named Session
+#### Start Named Session
 
 You can as well start a named session, for example if you are running multiple screen sessions. To create a named session:
 
@@ -120,7 +120,7 @@ screen -S session_name
 
 ### Useful Screen Commands
 
-> :bulb: **Tip:** You can use `man` to see a detailed documentation about `screen`.
+> :bulb:**Tip:** You can use `man` to see a detailed documentation about `screen`.
 
 To create a new window with shell
 
@@ -194,7 +194,7 @@ Ctrl + a + d
 
 The program running in the screen session will continue to run after you detach from the session.
 
-### Reattach to a Screen session
+#### Reattach to a Screen session
 
 To resume your `screen` session, use the following command
 
@@ -228,7 +228,7 @@ screen -r 29062
 
 ## Sherlock
 
-**Sherlock** is a [python](https://www.python.org/) tool, that can find social media accounts by username across various [social networks](https://github.com/sherlock-project/sherlock/blob/master/sites.md).
+**Sherlock** is a [python](https://www.python.org/) tool, that uses a username to find social media accounts across various [social networks](https://github.com/sherlock-project/sherlock/blob/master/sites.md).
 
 - [Install Sherlock](#install-sherlock)
 - [How to use Sherlock](#sherlock-usage)
@@ -249,7 +249,7 @@ After that, change the working directory to sherlock:
 cd sherlock
 ```
 
-:bulb: You may need to install `python3` and `pip` first, before you can install the necessary requirements:
+:bulb:**Info:** You may need to install `python3` and `pip` first, before you can install the necessary requirements:
 
 Update your system:
 
@@ -278,7 +278,7 @@ A detailed description about all possible arguments `Sherlock` provides can be l
 python3 sherlock --help
 ```
 
-Or on the official [GitHub repository](https://github.com/sherlock-project/sherlock#usage).
+And on the official [GitHub repository](https://github.com/sherlock-project/sherlock#usage).
 
 To search only for one user:
 
