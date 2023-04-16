@@ -12,6 +12,7 @@ Cheat Sheet is a collection about various topics that consists of
 ## Table of Contents
 
 - [All about Linux](/linux/README.md)
+  - [ZSH - Terminal](/linux/configuration.md#oh-my-zsh)
 - [All about Docker](/docker/README.md)
 
 ### Tools
